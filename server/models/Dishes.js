@@ -5,18 +5,18 @@ const DishSchema = new mongoose.Schema({
     dishname: {
         type:String,
         required:true,
-        min:3,
-        max:200,
         unique:true
     },
-    course: {
+    category: {
         type:String,
         required:true,
-        min:3
     },
-   ingredients: {
-        type:Array,
-        default: []
+   price: {
+        type:Number,
+    },
+    img: {
+         type:String,
+         default:""
     },
    liked: {
         type:Array,
