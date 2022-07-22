@@ -20,14 +20,16 @@ const AddButton = () => {
       fetchAllDishes()
       console.log(dishesList)
   }, [])
-
-  return <div className='addButton'>
-    {  
-      dishesList.map (item=> 
-      <Card price={item.price} name={item.dishname} category={item.category} id={item._id} img={item.img}/>     
-      )
-    }
-  </div>;
+  
+  return (
+    <div className='addButton'>
+    {dishesList.map(item => (
+      <div key={item._id}>
+        <Card price={item.price} name={item.dishname} category={item.category} id={item._id} img={item.img}/>   
+      </div>
+    ))}
+  </div>
+  )
 };
 
 export default AddButton;
