@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    
+    
+    
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="card-container">
+    
+            <div id="front" class="front">
+                <div class="image">
+                    <img src="./img/chip.png" alt="">
+                    <img class="cardLogo" src="" alt="">
+                </div>
+                <div class="card-number-box">#### #### #### ####</div>
+                <div class="flexbox">
+                    <div class="box">
+                        <span>TITULAR</span>
+                        <div class="card-holder-name">NOMBRE COMPLETO</div>
+                    </div>
+                    <div class="box">
+                        <span>VENCIMIENTO</span>
+                        <div class="expiration">
+                            
+                            <span class="exp-month">MM</span>
+                            <span class="exp-year">AA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div id="back" class="back">
+                <div class="stripe"></div>
+                <div class="box">
+                    <span>COD SEGURIDAD</span>
+                    <div class="cvv-box"></div>
+                    <img class="cardLogo" src="" alt="">
+                </div>
+            </div>
+    
+        </div>
+    
+
+        
+        <form id="formulario">
+            <div class="inputBox">
+                <span>NÚMERO DE TARJETA</span>
+                <input id="cardNumber" type="text" class="card-number-input">
+            </div>
+            <div class="inputBox">
+                <span>TITULAR</span>
+                <input type="text" class="card-holder-input">
+            </div>
+            <div class="flexbox">
+                <div class="inputBox">
+                    <span>MES DE VENCIMIENTO</span>
+                    <select id="month" class="month-input">
+                        <option value="month" selected disabled>MES</option>
+                        
+                    </select>
+                </div>
+                <div class="inputBox">
+                    <span>AÑO DE VENCIMIENTO</span>
+                    <select id="year" class="year-input">
+                        <option value="year" selected disabled>AÑO</option>                
+                    </select>
+                </div>
+                <div class="inputBox">
+                    <span>COD SEGURIDAD</span>
+                    <input type="text" maxlength="4" class="cvv-input">
+                </div>
+            </div>
+            <div id="divBtnEnviar">
+                <button type="button" value="enviar" class="submit-btn" id="btnEnviar">ENVIAR</button>
+            </div>
+        </form>
+    
+    </div>  
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./card.js"></script>
+</body>
+</html>
