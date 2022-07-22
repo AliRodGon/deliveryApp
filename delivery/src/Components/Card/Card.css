@@ -1,0 +1,45 @@
+* {
+  margin: 0
+}
+  body {
+    background: rgba(255, 255, 255, 0.988)
+  }
+  .individualCard {
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    background-color: white;
+    
+    box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.442);
+    margin: 1rem;
+    border-radius: 15px;
+    display: grid;
+  }
+  img {
+    border-radius: 25px;
+    background-color: white;
+    width: 90%;
+    height: auto;
+    justify-self: center;
+    padding: 0.30rem;
+  }
+  
+  .mainBodyCard {
+    display: flex;
+  }
+
+
+  .card.product .btn {
+    bottom: 1.5rem;
+    max-width: 80%;
+    margin: 0.3rem
+  }
+  
+  .price {
+    font-size: 1.75rem;
+  }
+
+  
+  p {
+    font-size: 1rem;
+  }
