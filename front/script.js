@@ -163,6 +163,7 @@ function cambiarEstadoVisibilidad(id){
     contrasena: passwordValue,
     ultimoPedido: [],
   };
+  
   //Esto sólo se ejecuta la primera vez
   let datosUsuarios = JSON.parse(localStorage.getItem("datosUsuarios"));
   if (datosUsuarios == null) {
