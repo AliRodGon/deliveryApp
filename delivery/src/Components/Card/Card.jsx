@@ -6,7 +6,7 @@ import AddButton from '../AddButton/AddButton';
 const Card = (props)=> {
   const [totalPrice,setTotalPrice] = useState(props.price)
   const [numberOfPortions, setNumberOfPortions] = useState(0)
-  
+  console.log(numberOfPortions)
   const addOnePortion = ()=> {
     setNumberOfPortions (numberOfPortions+1)
     setTotalPrice (totalPrice+props.price)
