@@ -30,7 +30,7 @@ router.get("/", async (req,res)=>{
 })            
 
 router.get("/bebidas", async (req,res)=>{
-    const bebidas = await Dish.find({category: "Bebidas"})
+    const bebidas = await Dish.find({category: "bebidas"})
     res.status(200).json(bebidas)
 })
 
