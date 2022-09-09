@@ -22,6 +22,17 @@ router.post("/newdish", async (req,res)=>{
                     }
                 });
 
+//Modify dish
+router.put("/:id", async (req,res)=>{
+    try {
+        const UpdatedDish = await Dish.findByIdAndUpdate(req.params.id, {$set:req.body})
+        res.status(200).json(UpdatedDish)
+
+    }catch(err) {
+        console.log(err);
+    }
+})
+
 //get all dishes
 router.get("/", async (req,res)=>{
     const allDishes = await Dish.find()
@@ -29,9 +40,15 @@ router.get("/", async (req,res)=>{
 
 })            
 
-router.get("/bebidas", async (req,res)=>{
-    const bebidas = await Dish.find({category: "bebidas"})
-    res.status(200).json(bebidas)
-})
+//like a dish
+// router.put("/:id/liked", async (req,res)=>{
+//     const dish = await Dish.findById(req.params.id); //primero le llega el id del Dish por params (id en la url)
+//         console.log(dish)
+
+
+// })
+
+
+
 
 module.exports = router

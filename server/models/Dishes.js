@@ -11,14 +11,14 @@ const DishSchema = new mongoose.Schema({
         type:String,
         required:true,
     },
-   price: {
+    price: {
         type:Number,
     },
     img: {
          type:String,
          default:""
     },
-   liked: {
+    liked: {
         type:Array,
         default: []
    }

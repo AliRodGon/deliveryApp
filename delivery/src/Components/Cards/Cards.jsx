@@ -1,6 +1,7 @@
 import React from "react";
-import Card from "../Card/Card";
 import AddButton from "../AddButton/AddButton";
+import Card from "../Card/Card";
+// import AddButton from "../AddButton/AddButton";
 
 const Cards = (props) => {
 
@@ -8,9 +9,9 @@ const Cards = (props) => {
 
 
   return <div>
-     <AddButton/> 
+     <Card/> 
     
-    <button>Hey, I'm a button {props.totalPrice}</button> 
+    {/* <button>Hey, I'm a button {props.totalPrice}</button>  */}
    
   </div>;
 };

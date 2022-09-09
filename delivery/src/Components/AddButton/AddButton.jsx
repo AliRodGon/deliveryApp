@@ -19,7 +19,10 @@ const AddButton = () => {
       };
       fetchAllDishes()
       console.log(dishesList)
+      
   }, [])
+  
+
   
   return (
     <div className='addButton'>
