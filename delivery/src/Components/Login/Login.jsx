@@ -13,8 +13,6 @@ const Login = () => {
     const handleLogin = e => {
       e.preventDefault()
 
-
-
       const data = { username, email, password }
       const requestOptions = {
             method: "POST",
@@ -24,18 +22,8 @@ const Login = () => {
       fetch("http://localhost:5000/api/auth/login", requestOptions)
             .then(response=>response.json())
             .then(response => setAnswer(response)
-
-            
             )
-            if (!answer.ok) {
-                  // get error message from body or default to response status
-                  const error = (data && data.message) || answer.status;
-                  return Promise.reject(error);
-              }
-            
-     
     };
-
 
 
   return (

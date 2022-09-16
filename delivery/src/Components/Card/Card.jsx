@@ -7,21 +7,23 @@ const Card = (props)=> {
   const [totalPrice,setTotalPrice] = useState(props.price)
   
   const [numberOfPortions, setNumberOfPortions] = useState(0)
+  console.log("soy numberofportions fuera de la funcion ADD " + numberOfPortions)
+  console.log("soy totalPrice fuera de la funcion ADD " + totalPrice)
 
-  console.log(numberOfPortions)
+
   const addOnePortion = ()=> {
     setNumberOfPortions (numberOfPortions+1)
-    setTotalPrice (totalPrice+props.price)
-    console.log("hello  "+ totalPrice)
-    console.log(numberOfPortions)
+    setTotalPrice (props.price*(numberOfPortions+1))
+    // console.log("hello  "+ totalPrice)
+    // console.log(numberOfPortions)
   }
 
   const removeOnePortion =()=> {
     if (numberOfPortions>0) {
-      setTotalPrice (totalPrice-props.price)
+      setTotalPrice (props.price*(numberOfPortions-1))
       setNumberOfPortions (numberOfPortions-1)
-      console.log("goodbay " + totalPrice)
-      console.log(numberOfPortions)
+      // console.log("goodbay " + totalPrice)
+      // console.log(numberOfPortions)
     } 
   }
 
@@ -42,7 +44,7 @@ const Card = (props)=> {
             <p>
               Raciones pedidas: {numberOfPortions}
             </p>
-            <p>{totalPrice-props.price}</p>
+            <p>{totalPrice}</p>
           </div>
       </div>
     </div> 
